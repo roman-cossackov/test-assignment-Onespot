@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { setupStore } from "./store/store.ts";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 
 import HomePage from "./pages/HomePage.tsx";
 
@@ -11,7 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage.tsx";
 import NewsItemPage from "./pages/NewsItemPage.tsx";
 
 const store = setupStore();
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		path: "/",
 		element: <HomePage />,

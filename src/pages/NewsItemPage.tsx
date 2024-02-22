@@ -23,11 +23,14 @@ const NewsItemPage = () => {
 					{newsItem?.text.slice(0, 100)}...
 				</div>
 				<div className={styles.image}>
-					<img src={newsItem?.image} alt="news-image" />
+					<img
+						src={`${newsItem?.image}?lock=${newsItem.id}`}
+						alt="news-image"
+					/>
 				</div>
 				<div className={styles.text}>{newsItem?.text}</div>
 				<div>
-                    <h2 className={styles.commentsHeader}>Comments:</h2>
+					<h2 className={styles.commentsHeader}>Comments:</h2>
 					{newsItemComments ? (
 						newsItemComments.map((comment) => (
 							<Comment key={comment.id} comment={comment} />

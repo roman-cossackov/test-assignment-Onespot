@@ -6,10 +6,12 @@ const News = () => {
 
 	return (
 		<div>
-			<ul>
+			<ul style={{ listStyle: "none" }}>
 				{news &&
-					news.map((iNews) => (
-						<NewsItem key={iNews.name} iNews={iNews} />
+					news.map((article) => (
+						<li key={article.name}>
+							<NewsItem article={article} />
+						</li>
 					))}
 			</ul>
 		</div>

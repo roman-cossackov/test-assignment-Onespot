@@ -6,7 +6,6 @@ const News = () => {
 
 	return (
 		<div>
-			<h1>NEWS</h1>
 			<ul>
 				{news &&
 					news.map((iNews) => (

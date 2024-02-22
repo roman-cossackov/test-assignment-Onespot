@@ -1,0 +1,20 @@
+.header {
+	border-bottom: 2px solid black;
+	padding-bottom: 10px;
+	position: relative;
+	margin: 10px 0 40px 0;
+}
+
+.title {
+	text-align: center;
+	font-size: 3.5rem;
+	font-weight: 900;
+}
+
+.date {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	font-weight: 600;
+	font-size: 1.25rem;
+}

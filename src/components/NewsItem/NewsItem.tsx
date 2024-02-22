@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./NewsItem.module.scss";
 import { INews } from "../../models/INews";
 import { formatDate } from "../../lib/formatDate";
+import eyeIcon from "../../assets/eye.svg";
 
 interface NewsItemProps {
 	iNews: INews;
@@ -25,10 +26,7 @@ const NewsItem: FC<NewsItemProps> = ({ iNews }) => {
 						<div className={styles.viewsAndDateConainer}>
 							<div className={styles.date}>{formattedDate}</div>
 							<div className={styles.views}>
-								<img
-									src="/src/assets/eye.svg"
-									alt="eye-image"
-								/>
+								<img src={eyeIcon} alt="eye-image" />
 								{iNews.views}
 							</div>
 						</div>
